@@ -14,3 +14,4 @@ jobs:
         IMAGE_NAME=test_container:${GITHUB_REF#refs/heads/}
         ls
         pwd
+        docker-compose ps
