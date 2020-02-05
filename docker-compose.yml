@@ -8,5 +8,6 @@ services:
       - REACT_APP_NAME=my-app
     volumes:
       - ./app:/usr/src/app
+      - ./build:/usr/src/build
     ports:
       - "3000:3000"
