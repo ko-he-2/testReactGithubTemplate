@@ -13,8 +13,8 @@ jobs:
       run: |
         docker-compose run node ash -c "cd \$REACT_APP_NAME; yarn build; cp -rf build /usr/src/"
     - uses: crazy-max/ghaction-github-pages@v1
-        with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        target_branch: gh-pages
+        build_dir: build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
