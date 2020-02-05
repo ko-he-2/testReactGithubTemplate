@@ -10,8 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build app
-      run: |
-        docker-compose run --rm node ash -c 'cd \$REACT_APP_NAME; yarn build; echo aaaaaaaaa; ls; cp -rf build /usr/src/build'
+      run: docker-compose run --rm node ash -c "cd \$REACT_APP_NAME; yarn build; echo aaaaaaaaa; ls; cp -rf build /usr/src/build"
     - uses: crazy-max/ghaction-github-pages@v1
       with:
         target_branch: gh-pages
