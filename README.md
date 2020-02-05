@@ -32,7 +32,7 @@ services:
 - 開発サーバーを立ち上げる
 
 ```
-docker-compose run --service-ports node ash -c "cd \$REACT_APP_NAME; yarn start"
+docker-compose run --rm --service-ports node ash -c "cd \$REACT_APP_NAME; yarn start"
 ```
 
 - コードを修正する
@@ -42,5 +42,5 @@ docker-compose run --service-ports node ash -c "cd \$REACT_APP_NAME; yarn start"
 - パッケージを追加する
 
 ```
-docker-compose run --service-ports node ash -c "cd \$REACT_APP_NAME; yarn add package-name"
+docker-compose run --rm  --service-ports node ash -c "cd \$REACT_APP_NAME; yarn add package-name"
 ```
