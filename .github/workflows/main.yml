@@ -12,6 +12,8 @@ jobs:
     - name: build app
       run: docker-compose run --rm node ash -c 'cd $REACT_APP_NAME; npm install; yarn build; cp -rf build /usr/src/build'
     - name: TMP
+      run: echo aaaaa > aaaaa.txt
+    - name: TMP
       run: ls
     - uses: crazy-max/ghaction-github-pages@v1
       with:
